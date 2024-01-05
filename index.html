@@ -5,12 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@300;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600&display=swap"
     rel="stylesheet">
   <!-- bootstrap -->
   <link rel="stylesheet" href="./css/bootstrap.css">
   <!-- self -->
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Document</title>
   <style>
 
@@ -24,7 +26,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark opacity-75 fixed-top ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">泰山莊園咖啡</a>
+      <a class="navbar-brand" href="#">HOTPOT</a>
       <!-- 漢堡按鈕 ， data-bs-toggle="offcanvas" 觸發側邊欄的功能， data-bs-target="#kaifu" 觸發的目標-->
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#www">
         <span class="navbar-toggler-icon"></span>
@@ -61,10 +63,10 @@
 
 
   <!-- ======================================================================== -->
-  <!-- 輪播圖 -->
+  <!-- 輪播圖 section01  -->
   <!-- ======================================================================== -->
 
-  <div class="section01">
+  <section id="section01">
     <div id="carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -112,51 +114,223 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </div>
+  </section>
 
   <!-- ======================================================================== -->
-  <!-- 卡片 -->
+  <!-- 卡片 section02  -->
   <!-- ======================================================================== -->
-
-  <div id="section02" class="d-flex align-items-center">
-    <div class="container ">
-      <div class="row pt-5 pb-5">
-        <div class="col-sm-12 col-md-4 p-3">
-          <div class="card h-100 ">
-            <img src="https://www.starbucks.com.tw/common/objects/images/product/20231020165238565.jpg"
-              class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">太妃核果風味冷萃咖啡</h5>
-              <p class="card-text">Toffee Nut Crunch Cold Brew Coffee</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 p-3">
-          <div class="card h-100">
-            <img src="https://www.starbucks.com.tw/common/objects/images/product/20231020165338857.jpg"
-              class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">冰太妃核果風味那堤</h5>
-              <p class="card-text">Iced Toffee Nut Crunch Latte</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
+  <section id="section02">
+    <div class="container">
+      <!-- 第一張卡片 -->
+      <div class="col-sm-12 col-md-4 p-3">
+        <div class="card h-100">
           <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">Daily Fresh</h6>
-            <h2 class="card-title">Beautiful fresh hygenic food</h2>
-            <a href="#" class="btn btn-primary">Purches</a>
-            <div>
+            <!-- 文字 -->
+            <div class="feature-box-content">
+              <div class="card-subtitle mb-2 text-muted">
+                <h6>Daily Fresh</h6>
+              </div>
+              <div class="card-title">
+                <h2>Beautiful fresh hygenic food</h2>
+              </div>
+              <div class="btn btn-dark">
+                <a href="#">Purches</a>
+              </div>
+            </div>
+            <!-- 圖片 -->
+            <div class="img-box">
               <img src="assets/images/feature-thumb.png" alt="">
             </div>
           </div>
         </div>
+      </div>
 
+      <!-- 第二張卡片 -->
+      <div class="col-sm-12 col-md-4 p-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <!-- 文字 -->
+            <div class="feature-box-content">
+              <div class="card-subtitle mb-2 text-muted">
+                <h6>Daily Fresh</h6>
+              </div>
+              <div class="card-title">
+                <h2>Beautiful fresh hygenic food</h2>
+              </div>
+              <div class="btn btn-dark">
+                <a href="#">Purches</a>
+              </div>
+            </div>
+            <!-- 圖片 -->
+            <div class="img-box">
+              <img src="assets/images/feature-thumb-2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- 第三張卡片 -->
+      <div class="col-sm-12 col-md-4 p-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <!-- 文字 -->
+            <div class="feature-box-content">
+              <div class="card-subtitle mb-2 text-muted">
+                <h6>Daily Fresh</h6>
+              </div>
+              <div class="card-title">
+                <h2>Beautiful fresh hygenic food</h2>
+              </div>
+              <div class="btn btn-dark">
+                <a href="#">Purches</a>
+              </div>
+            </div>
+            <!-- 圖片 -->
+            <div class="img-box">
+              <img src="assets/images/feature-thumb-3.png" alt="">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+  <!-- ======================================================================== -->
+  <!-- 關於 section03  -->
+  <!-- ======================================================================== -->
+  <section id="section03">
+    <div class="container">
+      <div class="row">
+        <!-- 圖 -->
+        <div class="col-lg-6">
+          <div class="about-img">
+            <img src="./assets/images/about-thumb.png" alt="">
+          </div>
+        </div>
+        <!-- 文 -->
+        <div class="col-lg-6">
+          <div class="about-content">
+            <div class="about-sub-title">
+              <h6>About Us</h6>
+            </div>
+            <div class="about-title">
+              <h1>
+                We Care Organic And Food Products Growth
+              </h1>
+            </div>
+            <div class="about-detail">
+              <p>
+                Synergistically streamline multifunctional channels whereas standards in web services. Assertively
+                conceptualize sustaina services visa vis sustainable .
+              </p>
+            </div>
+          </div>
+          <!-- ICON -->
+          <div>
+            <div class="about-item">
+              <div class="about-item-icon">
+                <img src="./assets/images/about-icon.png" alt="icon">
+              </div>
+              <div class="about-item-title">
+                <h4>Best Quality Stand</h4>
+              </div>
+            </div>
+            <div class="about-item">
+              <div class="about-item-icon">
+                <img src="./assets/images/about-icon.png" alt="icon">
+              </div>
+              <div class="about-item-title">
+                <h4>Nice Organic Service</h4>
+              </div>
+            </div>
+          </div>
+          <!-- 按鈕 -->
+          <div class="btn btn-dark">
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- ======================================================================== -->
+  <!-- 人氣推薦 section04  -->
+  <!-- ======================================================================== -->
+
+
+  <section class="section04">
+    <div class="container">
+      <div class="product">
+
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <div class="organic-section-sub-title">
+              <h6>Our Fresh Food</h6>
+            </div>
+            <div class="organic-section-title">
+              <h1>Good Organic Food</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="product-single-box">
+              <div class="product-box">
+                <img src="assets/images/fresh-food-thumb.png" alt="thumb">
+              </div>
+              <div class="fresh-food-box-content">
+                <div class="fresh-food-box-title">
+                  <h5>Fresh Banana</h5>
+                </div>
+                <div class="fresh-food-box-price">
+                  <h6>$10 - $20</h6>
+                </div>
+                <div class="fresh-food-box-rate">
+                  <ul>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="fresh-food-icon">
+                <ul>
+                  <li><a href="eror.html"><i class="bi bi-heart"></i></a></li>
+                  <li><a href="eror.html"><i class="far fa-eye"></i></a></li>
+                  <li><a href="shop.html"><i class="bi bi-cart4"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================== -->
+  <!-- 我們的服務 section05  -->
+  <!-- ======================================================================== -->
+
+  <!-- ======================================================================== -->
+  <!-- 菜單 section06  -->
+  <!-- ======================================================================== -->
+
+  <!-- ======================================================================== -->
+  <!-- 最新消息 section07  -->
+  <!-- ======================================================================== -->
+
+  <!-- ======================================================================== -->
+  <!-- 加盟我們 section08  -->
+  <!-- ======================================================================== -->
+
+  <!-- ======================================================================== -->
+  <!-- 創業故事 section09  -->
+  <!-- ======================================================================== -->
+
+  <!-- ======================================================================== -->
+  <!-- FOOTER  -->
+  <!-- ======================================================================== -->
 
 
 
