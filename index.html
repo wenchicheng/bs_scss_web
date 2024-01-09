@@ -31,21 +31,21 @@
   <!-- 導覽列 -->
   <!-- ======================================================================== -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark opacity-75 fixed-top ">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark opacity-75 fixed-top ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">HOTPOT</a>
-      <!-- 漢堡按鈕 ， data-bs-toggle="offcanvas" 觸發側邊欄的功能， data-bs-target="#kaifu" 觸發的目標-->
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#www">
+      <a class="navbar-brand" href="#">HOTPOT</a> -->
+  <!-- 漢堡按鈕 ， data-bs-toggle="offcanvas" 觸發側邊欄的功能， data-bs-target="#___" 觸發的目標-->
+  <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#www">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- 側邊選單 -->
-      <div class="offcanvas offcanvas-start navbar-dark bg-dark" id="www" data-bs-backdrop="true" data-bs-scroll="true">
+      </button> -->
+  <!-- 側邊選單 -->
+  <!-- <div class="offcanvas offcanvas-start navbar-dark bg-dark" id="www" data-bs-backdrop="true" data-bs-scroll="true">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title text-white">Content</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <!-- 項目 -->
-        <div class="offcanvas-body">
+        </div> -->
+  <!-- 項目 -->
+  <!-- <div class="offcanvas-body">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" href="#">菜單餐點</a>
@@ -64,6 +64,44 @@
             </li>
           </ul>
         </div>
+      </div>
+    </div>
+  </nav> -->
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/logo.png" alt="">
+      </a>
+      <!-- 漢堡按鈕  -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+
+          <!-- 選單 -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown">Home</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Home Page 01</a></li>
+              <li><a class="dropdown-item" href="#">Home Page 02</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+              data-bs-toggle="dropdown">Product</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Home Page 01</a></li>
+              <li><a class="dropdown-item" href="#">Home Page 02</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
