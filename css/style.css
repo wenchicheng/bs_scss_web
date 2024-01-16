@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -16,6 +17,12 @@ body {
   --bs-link-color: #fff;
   --bs-link-hover-color: #fff;
   --bs-orange: #fd7e14;
+  --bs-green:#7FBD43;
+}
+
+.bg-orange {
+  --bs-bg-opacity: 1;
+  background-color: var(--bs-orange);
 }
 
 .container {
@@ -89,4 +96,19 @@ a {
   position: relative;
   left: 0;
   right: 0;
+}
+
+.navbar-toggler-icon {
+  opacity: 1;
+}
+
+.navbar-toggler-icon::before {
+  content: "☰"; /* Unicode character for three horizontal lines (☰) */
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler-icon.active::before {
+  content: "X"; /* Display 'X' when active */
 }
