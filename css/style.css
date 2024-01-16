@@ -16,8 +16,11 @@ body {
 :root {
   --bs-link-color: #fff;
   --bs-link-hover-color: #fff;
-  --bs-orange: #fd7e14;
-  --bs-green:#7FBD43;
+  --bs-orange: #FF8F26;
+  --bs-lightorange: #ffd9ae;
+  --bs-orangeY: #FFC526;
+  --bs-yellow: #FFFC26;
+  --bs-green:#96FF26;
 }
 
 .bg-orange {
@@ -55,20 +58,57 @@ a {
   text-decoration: none;
 }
 
+/* NAVBAR ==================================================== */
+.navbar {
+  --bs-navbar-toggler-border-color: var(--bs-orange);
+}
+
+.navbar-toggler {
+  color: var(--bs-navbar-color);
+  border: none;
+}
+
+.navbar-toggler:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+}
+
+.navbar-toggler-icon::before {
+  content: "☰"; /* Unicode character for three horizontal lines (☰) */
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler-icon.active::before {
+  content: "X"; /* Display 'X' when active */
+}
+
 /* CARD ==================================================== */
 .card {
   --bs-card-spacer-y: 30px;
   --bs-card-spacer-x: 30px;
   --bs-card-title-spacer-y: 1rem;
+  --bs-card-color: var(--bs-black);
+  --bs-card-bg:var(--bs-lightorange);
 }
 
 .card-body {
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-black);
 }
 
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
   margin-top: calc(0.15 * var(--bs-card-title-spacer-y));
+}
+
+.card-subtitle h6 {
+  color: var(--bs-black);
 }
 
 /* ABOUT ==================================================== */
@@ -96,19 +136,4 @@ a {
   position: relative;
   left: 0;
   right: 0;
-}
-
-.navbar-toggler-icon {
-  opacity: 1;
-}
-
-.navbar-toggler-icon::before {
-  content: "☰"; /* Unicode character for three horizontal lines (☰) */
-  display: inline-block;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.navbar-toggler-icon.active::before {
-  content: "X"; /* Display 'X' when active */
 }

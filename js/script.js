@@ -1,9 +1,10 @@
 $('.navbar-toggler-icon').css({'background': ''})
-
 $('.navbar-toggler-icon').on('click', function() {
 
   $(this).toggleClass('active');
 })
+
+
 
 // $('.navbar-toggler-icon').on('click', function() {
 //   if (parseInt($(this).css('opacity')) === 1) {
