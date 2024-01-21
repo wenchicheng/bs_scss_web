@@ -7,3 +7,36 @@
     margin-bottom: 30px;
     
 */
+
+
+@media(min-width:576px) {
+    #carousel {
+    height: calc(40vh + 10vw);
+      /*在視窗 576~991 時 (10vh固定數值 + 10vw 隨著視窗慢慢變大) */
+    }
+
+    #carousel .carousel {
+    height: 100%;
+    }
+
+    #carousel .carousel-inner {
+    height: 100%;
+    }
+
+    #carousel .carousel-item {
+    height: 100%;
+    }
+
+    #carousel .carousel-item img {
+    height: 100%;
+    }
+}
+
+
+
+
+@media(min-width:992px) {
+    #carousel {
+    height: 100vh;
+    }
+}

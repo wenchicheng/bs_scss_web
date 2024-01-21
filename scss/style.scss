@@ -94,6 +94,14 @@ a {
 }
 
 
+/* CAROUSEL ==================================================== */
+
+#carousel .carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  /* overflow: hidden; */
+}
 
 
 
