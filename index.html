@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- google font -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@300;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,500;1,600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;600;800&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap"
     rel="stylesheet">
   <!-- bootstrap -->
   <link rel="stylesheet" href="./css/bootstrap.css">
@@ -15,7 +14,9 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/mediaQuery.css">
   <!-- font-awesome -->
-  <link rel="stylesheet" href="./css/all.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css'
+    integrity='sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=='
+    crossorigin='anonymous' />
   <!-- CDNJS 引入 animate.css -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css' />
 
@@ -33,8 +34,9 @@
 
   <nav class="navbar navbar-expand-lg bg-orange">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="./assets/images/logo-2.png">
+      <a class="navbar-brand playfair" href="#">
+        Organic
+        <!-- <img src="./assets/images/logo-2.png"> -->
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +59,7 @@
   <!-- ======================================================================== -->
 
   <section id="section01">
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="carousel" class="carousel" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
           aria-label="Slide 1"></button>
@@ -111,10 +113,10 @@
   <!-- ======================================================================== -->
   <section id="section02">
     <div class="container">
-      <!-- 第一張卡片 -->
-      <div class="col-sm-12 col-md-4 p-3">
-        <div class="card h-100">
-          <div class="card-body">
+      <div class="row">
+        <!-- 第1張卡片 -->
+        <div class="col-sm-12 col-lg-4 p-3">
+          <div class="feature-single-box style-1">
             <!-- 文字 -->
             <div class="feature-box-content">
               <div class="card-subtitle mb-2 text-muted">
@@ -133,19 +135,16 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- 第二張卡片 -->
-      <div class="col-sm-12 col-md-4 p-3">
-        <div class="card h-100">
-          <div class="card-body">
+        <!-- 第2張卡片 -->
+        <div class="col-sm-12 col-lg-4 p-3">
+          <div class="feature-single-box style-2">
             <!-- 文字 -->
             <div class="feature-box-content">
               <div class="card-subtitle mb-2 text-muted">
-                <h6>Daily Fresh</h6>
+                <h6>100% Vital</h6>
               </div>
               <div class="card-title">
-                <h2>Beautiful fresh hygenic food</h2>
+                <h2>Eats healthy good foods</h2>
               </div>
               <div class="btn btn-dark">
                 <a href="#">Purches</a>
@@ -157,19 +156,16 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- 第三張卡片 -->
-      <div class="col-sm-12 col-md-4 p-3">
-        <div class="card h-100">
-          <div class="card-body">
+        <!-- 第3張卡片 -->
+        <div class="col-sm-12 col-lg-4 p-3">
+          <div class="feature-single-box style-3">
             <!-- 文字 -->
             <div class="feature-box-content">
               <div class="card-subtitle mb-2 text-muted">
                 <h6>Daily Fresh</h6>
               </div>
               <div class="card-title">
-                <h2>Beautiful fresh hygenic food</h2>
+                <h2>Pure Product content</h2>
               </div>
               <div class="btn btn-dark">
                 <a href="#">Purches</a>
@@ -181,6 +177,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -190,10 +187,18 @@
   <section id="section03">
     <div class="container">
       <div class="row">
-        <!-- 圖 -->
         <div class="col-lg-6">
-          <div class="about-img">
-            <img src="./assets/images/about-thumb.png" alt="">
+          <div class="about-thumb">
+            <!-- 撥放按鈕 -->
+            <div class="about-thumb-btn">
+              <a class="venobox vbox-item" data-vbtype="youtube" data-autoplay="true"
+                href="https://youtu.be/bVQ2V7y3plc" data-gall="video-repeat"><i class="fas fa-play"></i>
+              </a>
+            </div>
+            <!-- 圖 -->
+            <div class="about-img">
+              <img src="./assets/images/about-thumb.png" alt="thumb">
+            </div>
           </div>
         </div>
         <!-- 文 -->
@@ -215,26 +220,28 @@
             </div>
           </div>
           <!-- ICON -->
-          <div>
+          <div class="about-items">
             <div class="about-item">
               <div class="about-item-icon">
-                <img src="./assets/images/about-icon.png" alt="icon">
+                <img src="assets/images/about-icon.png" alt="icon">
               </div>
               <div class="about-item-title">
-                <h4>Best Quality Stand</h4>
+                <h4>Best Quality
+                  Stand</h4>
               </div>
             </div>
             <div class="about-item">
               <div class="about-item-icon">
-                <img src="./assets/images/about-icon.png" alt="icon">
+                <img src="assets/images/about-icon-2.png" alt="icon">
               </div>
               <div class="about-item-title">
-                <h4>Nice Organic Service</h4>
+                <h4>Nice Organic
+                  Service</h4>
               </div>
             </div>
           </div>
           <!-- 按鈕 -->
-          <div class="btn btn-dark">
+          <div class="btn btn-grass about-btn">
             <a href="#">Learn More</a>
           </div>
         </div>
@@ -244,112 +251,147 @@
   <!-- 人氣推薦 section04  -->
   <!-- ======================================================================== -->
 
-
   <section class="section04">
     <div class="container">
-      <div class="product">
+      <div class="row text-center">
+        <div class="col-lg-12">
 
-        <div class="row text-center">
-          <div class="col-lg-12">
-            <div class="organic-section-sub-title">
-              <h6>h6 product</h6>
-            </div>
-            <div class="organic-section-title">
-              <h1>h1 Good Organic Food</h1>
-            </div>
+          <div class="about-sub-title">
+            <h6>Our Fresh Food</h6>
+          </div>
+          <div class="about-title">
+            <h1>Good Organic Food</h1>
           </div>
         </div>
-
+      </div>
+      <div class="fresh-food-box">
         <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="product-single-box">
-
-              <!-- CARD 1 -->
-              <div class="col-sm-12 col-md-4 p-3">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <!-- 圖片 -->
-                    <div class="img-box">
-                      <img src="assets/images/feature-thumb.png" alt="">
-                    </div>
-                    <!-- 文字 -->
-                    <div class="feature-box-content">
-                      <div class="card-subtitle mb-2 text-muted">
-                        <h2>Fresh Banana</h2>
-                      </div>
-                      <div class="card-title">
-                        <h6>$10 - $20</h6>
-                      </div>
-                    </div>
-                  </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="fresh-food-single-box">
+              <div class="fresh-food-box-thumb">
+                <img src="assets/images/fresh-food-thumb.png" alt="thumb">
+              </div>
+              <div class="fresh-food-box-content">
+                <div class="fresh-food-box-title">
+                  <h5>Fresh Banana</h5>
+                </div>
+                <div class="fresh-food-box-price">
+                  <h6>$10 - $20</h6>
+                </div>
+                <div class="fresh-food-box-rate">
+                  <ul>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                  </ul>
                 </div>
               </div>
-              <!-- CARD 1 -->
-              <div class="col-sm-12 col-md-4 p-3">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <!-- 圖片 -->
-                    <div class="img-box">
-                      <img src="assets/images/feature-thumb.png" alt="">
-                    </div>
-                    <!-- 文字 -->
-                    <div class="feature-box-content">
-                      <div class="card-subtitle mb-2 text-muted">
-                        <h2>Fresh Banana</h2>
-                      </div>
-                      <div class="card-title">
-                        <h6>$10 - $20</h6>
-                      </div>
-                    </div>
-                  </div>
+              <div class="fresh-food-icon">
+                <ul>
+                  <li><a href="eror.html"><i class="bi bi-heart"></i></a></li>
+                  <li><a href="eror.html"><i class="far fa-eye"></i></a></li>
+                  <li><a href="shop.html"><i class="bi bi-cart4"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="fresh-food-single-box">
+              <div class="fresh-food-box-thumb">
+                <img src="assets/images/fresh-food-thumb-2.png" alt="thumb">
+              </div>
+              <div class="fresh-food-box-content">
+                <div class="fresh-food-box-title">
+                  <h5>Fresh Orange</h5>
+                </div>
+                <div class="fresh-food-box-price">
+                  <h6>$08 - $18</h6>
+                </div>
+                <div class="fresh-food-box-rate">
+                  <ul>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                  </ul>
                 </div>
               </div>
-              <!-- CARD 1 -->
-              <div class="col-sm-12 col-md-4 p-3">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <!-- 圖片 -->
-                    <div class="img-box">
-                      <img src="assets/images/feature-thumb.png" alt="">
-                    </div>
-                    <!-- 文字 -->
-                    <div class="feature-box-content">
-                      <div class="card-subtitle mb-2 text-muted">
-                        <h2>Fresh Banana</h2>
-                      </div>
-                      <div class="card-title">
-                        <h6>$10 - $20</h6>
-                      </div>
-                    </div>
-                  </div>
+              <div class="fresh-food-icon">
+                <ul>
+                  <li><a href="eror.html"><i class="bi bi-heart"></i></a></li>
+                  <li><a href="eror.html"><i class="far fa-eye"></i></a></li>
+                  <li><a href="shop.html"><i class="bi bi-cart4"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="fresh-food-single-box">
+              <div class="fresh-food-box-thumb">
+                <img src="assets/images/fresh-food-thumb-3.png" alt="thumb">
+              </div>
+              <div class="fresh-food-box-content">
+                <div class="fresh-food-box-title">
+                  <h5>Fresh Apple</h5>
+                </div>
+                <div class="fresh-food-box-price">
+                  <h6>$15 - $25</h6>
+                </div>
+                <div class="fresh-food-box-rate">
+                  <ul>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                  </ul>
                 </div>
               </div>
-              <!-- CARD 1 -->
-              <div class="col-sm-12 col-md-4 p-3">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <!-- 圖片 -->
-                    <div class="img-box">
-                      <img src="assets/images/feature-thumb.png" alt="">
-                    </div>
-                    <!-- 文字 -->
-                    <div class="feature-box-content">
-                      <div class="card-subtitle mb-2 text-muted">
-                        <h2>Fresh Banana</h2>
-                      </div>
-                      <div class="card-title">
-                        <h6>$10 - $20</h6>
-                      </div>
-                    </div>
-                  </div>
+              <div class="fresh-food-icon">
+                <ul>
+                  <li><a href="eror.html"><i class="bi bi-heart"></i></a></li>
+                  <li><a href="eror.html"><i class="far fa-eye"></i></a></li>
+                  <li><a href="shop.html"><i class="bi bi-cart4"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="fresh-food-single-box">
+              <div class="fresh-food-box-thumb">
+                <img src="assets/images/fresh-food-thumb-4.png" alt="thumb">
+              </div>
+              <div class="fresh-food-box-content">
+                <div class="fresh-food-box-title">
+                  <h5>Fresh Strwabery</h5>
+                </div>
+                <div class="fresh-food-box-price">
+                  <h6>$12 - $18</h6>
+                </div>
+                <div class="fresh-food-box-rate">
+                  <ul>
+                    <li><i class="fa-solid fa-star"></i></i></li>
+                    <li><i class="fa-solid fa-star"></i></i></li>
+                    <li><i class="fa-solid fa-star"></i></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                  </ul>
                 </div>
               </div>
-
+              <div class="fresh-food-icon">
+                <ul>
+                  <li><a href="eror.html"><i class="bi bi-heart"></i></a></li>
+                  <li><a href="eror.html"><i class="far fa-eye"></i></a></li>
+                  <li><a href="shop.html"><i class="bi bi-cart4"></i></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -363,10 +405,10 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="feature-content">
-            <div class="organic-section-sub-title">
+            <div class="about-sub-title">
               <h6>All Feature</h6>
             </div>
-            <div class="organic-section-title">
+            <div class="about-title">
               <h1>What Is Green Store?</h1>
             </div>
             <div class="feature-desc">
@@ -430,7 +472,7 @@
         </div>
         <div class="col-lg-6">
           <div>
-            <img class="w-100" src="./assets/images/feature-thumb.jpg" alt="thumb">
+            <img src="./assets/images/feature-thumb.jpg">
           </div>
         </div>
       </div>

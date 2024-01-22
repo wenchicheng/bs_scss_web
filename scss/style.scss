@@ -6,12 +6,15 @@
 }
 
 body {
-  color: rgb(44, 44, 44);
   background: white;
-  font-family: 'Noto Sans TC', sans-serif;
 }
 
 :root{
+  // -------- for this project
+  --bs-grass:#80bd44
+  --bs-dark:#333333;
+  --bs-yellow2:#f4de5e;
+  // -------- for other project 
   --bs-link-color: #fff;
   --bs-link-hover-color: #fff;
   --bs-orange: #FF8F26;
@@ -21,13 +24,9 @@ body {
   --bs-green:#96FF26;
 }
 
-.bg-orange{
-  --bs-bg-opacity: 1;
-  background-color: var(--bs-orange);
-}
 
 .container {
-	width: 90%;
+  width: 90%;
 	// padding-left: 15px;
 	// padding-right: 15px;
 	// margin: auto;
@@ -46,6 +45,10 @@ body {
   position: relative;
 }
 
+#section01{
+  height: 60rem;
+}
+
 #section03{
   padding: 100px 0;
 }
@@ -54,10 +57,106 @@ body {
   padding: 80px 0 100px;
 }
 
+#section05{
+  background-color: #f1f3ef;
+  padding: 100px 0;
+}
+
 a {
   color: var(--bs-link-color);
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
 }
+
+/* BG ==================================================== */
+
+.bg-orange{
+  --bs-bg-opacity: 1;
+  background-color: var(--bs-orange);
+}
+
+.feature-single-box.style-1 {
+  background: #80bd44;
+}
+.feature-single-box.style-2 {
+  background-color: #333333;
+}
+.feature-single-box.style-3 {
+  background-color: #f4de5e;
+}
+/* FONT ==================================================== */
+
+// p 內文---------------
+p {
+  font-family: 'Poppins', sans-serif;
+  color: #797979;
+  font-weight: 400;
+  
+}
+
+// h1 標題------------------
+.about-title h1{
+  font-family: 'Playfair Display';
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #333333;
+}
+
+// h6 綠色副標----------
+.about-sub-title h6{
+  font-size: 17px;
+  line-height: 28px;
+  padding-left: 22px;
+  color: #80bd44;
+  font-weight: 600;
+  font-family: "Poppins";
+  position: relative;
+  display: inline-block;
+}
+
+// h6綠色副標前的綠圓點
+.about-sub-title h6:before {
+  position: absolute;
+  content: '';
+  top: 8px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: #80bd44;
+  border-radius: 10px;
+}
+
+.noto{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.playfair{
+  font-family: 'Playfair Display',sans-serif;
+}
+.poppins{
+  font-family: 'Poppins', sans-serif;
+}
+
+.fontdark{
+  color: --bs-dark;
+}
+
+.fontwhite{
+  color: #fff;
+}
+
+.fontgreen{
+  color: #80bd44;
+}
+
+/* BTN ==================================================== */
+
+// .btn-grass {
+//   --bs-btn-color: #fff;
+//   --bs-btn-bg: #80bd44;
+//   }
+
 
 /* NAVBAR ==================================================== */
 
@@ -66,8 +165,14 @@ a {
   --bs-navbar-toggler-border-color: var(--bs-orange);
 }
 
+.navbar-brand{
+  color: var(--bs-white);
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
 .navbar-toggler{
-  color: var(--bs-navbar-color);
+  color: var(--bs-white);
   border: none;
 }
 
@@ -96,41 +201,125 @@ a {
 
 /* CAROUSEL ==================================================== */
 
-#carousel .carousel-item img {
+#carousel {
+  height: calc(70vh + 10vw);
+    /*在視窗 576~991 時 (10vh固定數值 + 10vw 隨著視窗慢慢變大) */
+  }
+
+  #carousel .carousel {
+  height: 100%;
+  }
+
+  #carousel .carousel-inner {
+  height: 100%;
+  }
+
+  #carousel .carousel-item {
+  height: 100%;
+  }
+
+  #carousel .carousel-item img {
   object-fit: cover;
   width: 100%;
-  height: 300px;
+  height: 100%;
   /* overflow: hidden; */
-}
-
+  }
 
 
 /* CARD ==================================================== */
 
-.card {
+.row{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -.5);
+  margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+.feature-single-box {
   --bs-card-spacer-y: 30px;
   --bs-card-spacer-x: 30px;
   --bs-card-title-spacer-y: 1rem;
-  --bs-card-color: var(--bs-black);
-  --bs-card-bg:var(--bs-lightorange);
+  border: none;
+
+  color: var(--bs-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  // z-index: 1;
+  padding: 30px;
+  border-radius: 5px;
+  transition: .5s;
 }
 
-.card-body {
-  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-  color: var(--bs-black);
+.feature-single-box::before {
+  position: absolute;
+  content: '';
+  top: -18px;
+  bottom: 0;
+  left: -8rem;
+  width: 280px;
+  height: 280px;
+  border-radius: 140px;
+  background-color: rgba(110, 110, 110, 0.102);
 }
+
 
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
   margin-top: calc(0.15 * var(--bs-card-title-spacer-y));
+  h2{
+    font-family: 'Playfair Display',sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+  }
 }
 
 .card-subtitle h6{
-  color: var(--bs-black);
+  color: var(--bs-white);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
 }
 
 
 /* ABOUT ==================================================== */
+
+
+.about-thumb{
+  position: relative;
+}
+
+.about-thumb-btn{
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  z-index: 1;
+}
+
+.about-thumb-btn a {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  background-color: #f4de5e;
+  display: inline-block;
+  font-size: 32px;
+  text-align: center;
+  line-height: 90px;
+  color: #333;
+  -webkit-animation: ripple-white 1s linear infinite;
+  animation: ripple-blue 1s linear infinite;
+  -webkit-transition: .5s;
+  transition: .5s;
+  animation-name: play-btn;
+}
+
+.about-thumb img{
+  width: 100%;
+}
 
 .about-img {
   position: relative;
@@ -147,13 +336,149 @@ a {
 }
 
 
+
+.about-items {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-item-title h4 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Playfair Display";
+  margin: 0;
+  width: 80%;
+}
+
+.about-btn {
+  margin-top: 43px;
+}
+
+.about-btn a {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 14px 32px;
+  overflow: hidden;
+  background-color: #80bd44;
+  position: relative;
+  // z-index: 1;
+  transition: .4s;
+}
+
 /* PRODUCT ==================================================== */
 
 .product-box{
-position: relative;
-left: 0;
-right: 0;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.fresh-food-single-box {
+  text-align: center;
+  position: relative;
+}
+
+.fresh-food-box-thumb img {
+  width: 100%;
+  transition: .5s;
+}
+
+.fresh-food-box-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.7rem;
+}
+
+.fresh-food-box-title h5 {
+  font-size: 20px;
+  line-height: 28px;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Playfair Display";
+  margin: 0;
+}
+
+.fresh-food-box-price h6 {
+  font-size: 18px;
+  line-height: 30px;
+  color: #797979;
+  font-weight: 600;
+  font-family: "Poppins";
+  margin: 2px 0 4px;
+}
+
+.fresh-food-box-rate {
+
+  ul{
+  padding-left: 0;
+  }
+  ul li {
+  display: inline-block;
+  margin: 0 2px;
+  color: #7fbd43;
+  font-size: 14px;
+}
+}
+
+/* section05 ==================================================== */
+
+.feature-item {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.feature-item-title h5 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Playfair Display";
 }
 
 
 
+/* KEYFRAMES ==================================================== */
+
+
+// 撥放icon 背景循環撥放效果
+@keyframes play-btn {
+  0% {
+      box-shadow: 
+      0 0 0 0 rgba(244, 222, 94, 0.3), 
+      0 0 0 10px rgba(244, 222, 94, 0.3), 
+      0 0 0 20px rgba(244, 222, 94, 0.3);
+      box-shadow: 
+      0 0 0 0 rgba(244, 222, 94, 0.3), 
+      0 0 0 10px rgba(244, 222, 94, 0.3), 
+      0 0 0 20px rgba(244, 222, 94, 0.3);
+  }
+  100% {
+      box-shadow: 0 0 0 10px rgba(244, 222, 94, 0.3), 0 0 0 20px rgba(244, 222, 94, 0.3), 0 0 0 30px rgba(244, 222, 94, 0);
+      box-shadow: 0 0 0 10px rgba(244, 222, 94, 0.3), 0 0 0 20px rgba(244, 222, 94, 0.3), 0 0 0 30px rgba(244, 222, 94, 0)
+  }
+}
+
+
+// 滑鼠選字變色--------------
+::selection {
+  background: #4fc1f0;
+  color: #454545;
+  text-shadow: none;
+}
