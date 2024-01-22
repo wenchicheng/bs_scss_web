@@ -15,3 +15,17 @@ $('.navbar-toggler-icon').on('click', function() {
 //     $(this).parent().find('.navbar-toggler-icon::before').css({'opacity': 0});
 //   }
 // })
+/* GSAP================================================ */
+
+    /* 滑鼠效果----------------------  */
+    const circles = document.querySelectorAll('.circle');
+
+    document.addEventListener('pointermove', (event) => {
+      const { clientX, clientY } = event;
+
+      circles.forEach(circle => {
+        gsap.to(circle, { x: clientX, y: clientY, duration: 0.2 });
+      });
+    });
+
+

@@ -485,3 +485,32 @@ p {
   color: #454545;
   text-shadow: none;
 }
+
+/* 滑鼠效果---------------------- */
+.mouse {
+  padding: 10px;
+}
+
+.circle {
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.circle.sm {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #80bd44;
+}
+
+.circle.md {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  /* background: #80bd44; */
+  border: 2px dashed #80bd44;
+}
