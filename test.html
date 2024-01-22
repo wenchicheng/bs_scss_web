@@ -18,16 +18,68 @@
   <!-- CDNJS 引入 animate.css -->
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css' />
 
+
   <!-- <link rel="stylesheet" href="./css/reset.css"> -->
 
   <title>Document</title>
   <style>
+    .mouse {
+      padding: 10px;
+    }
 
+    .circle {
+      position: fixed;
+      transform: translate(-50%, -50%);
+      top: 0;
+      left: 0;
+    }
+
+    .circle.sm {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #80bd44;
+    }
+
+    .circle.md {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      /* background: #80bd44; */
+      border: 2px dashed #80bd44;
+    }
+
+    /* .circle.lg {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #00f, #0000);
+    } */
   </style>
 </head>
 
 <body>
 
 
+
+  <div id="mouse" class="mouse">
+    <div id="circle-sm" class="circle sm"></div>
+    <div id="circle-md" class="circle md"></div>
+    <!-- <div id="circle-lg" class="circle lg"></div> -->
+  </div>
+
+  <script>
+
+    const circles = document.querySelectorAll('.circle');
+
+    document.addEventListener('pointermove', (event) => {
+      const { clientX, clientY } = event;
+
+      circles.forEach(circle => {
+        gsap.to(circle, { x: clientX, y: clientY, duration: 0.2 });
+      });
+    });
+
+  </script>
 
 </body>
