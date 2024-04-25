@@ -12,7 +12,7 @@ body {
 }
 
 :root {
-  --bs-grass:#80bd44
+  --bs-green:#3d976e;
   --bs-dark:#333333;
   --bs-yellow2:#f4de5e;
   --bs-link-color: #fff;
@@ -21,7 +21,7 @@ body {
   --bs-lightorange: #ffd9ae;
   --bs-orangeY: #FFC526;
   --bs-yellow: #FFFC26;
-  --bs-green:#96FF26;
+  --bs-grass:#96FF26;
 }
 
 .container {
@@ -72,11 +72,11 @@ a {
 }
 
 .bg-grass {
-  background-color: #80bd44;
+  background-color: var(--bs-green);
 }
 
 .feature-single-box.style-1 {
-  background: #80bd44;
+  background: var(--bs-green);
 }
 
 .feature-single-box.style-2 {
@@ -106,7 +106,7 @@ p {
   font-size: 17px;
   line-height: 28px;
   padding-left: 22px;
-  color: #80bd44;
+  color: var(--bs-green);
   font-weight: 600;
   font-family: "Poppins";
   position: relative;
@@ -120,7 +120,7 @@ p {
   left: 0;
   width: 12px;
   height: 12px;
-  background: #80bd44;
+  background: var(--bs-green);
   border-radius: 10px;
 }
 
@@ -145,19 +145,17 @@ p {
 }
 
 .fontgreen {
-  color: #80bd44;
+  color: var(--bs-green);
 }
 
 /* BTN ==================================================== */
 /* NAVBAR ==================================================== */
 .navbar {
-  --bs-navbar-toggler-border-color: var(--bs-orange);
+  --bs-navbar-padding-y: 0.2rem;
 }
 
-.navbar-brand {
-  color: var(--bs-white);
-  font-weight: 600;
-  font-size: 1.8rem;
+.navbar-brand img {
+  width: 240px;
 }
 
 .navbar-toggler {
@@ -240,7 +238,7 @@ p {
 .swiper-text h6 {
   font-size: 17px;
   line-height: 28px;
-  color: #80bd44;
+  color: var(--bs-green);
   font-weight: 600;
   font-family: "Poppins";
   position: relative;
@@ -258,7 +256,7 @@ p {
   border-radius: 5px;
   padding: 14px 32px;
   overflow: hidden;
-  background-color: #80bd44;
+  background-color: var(--bs-green);
   position: relative;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -461,7 +459,7 @@ p {
   border-radius: 5px;
   padding: 14px 32px;
   overflow: hidden;
-  background-color: #80bd44;
+  background-color: var(--bs-green);
   position: relative;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -565,13 +563,13 @@ p {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #80bd44;
+  background: var(--bs-green);
 }
 
 .circle.md {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  /* background: #80bd44; */
-  border: 2px dashed #80bd44;
+  /* background: var(--bs-green); */
+  border: 2px dashed var(--bs-green);
 }
